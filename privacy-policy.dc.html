@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Kebijakan Privasi — PT Bhinneka Inti Global</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/logo-big.png">
+<meta name="description" content="Kebijakan privasi PT Bhinneka Inti Global mengenai pengumpulan, penggunaan, dan perlindungan data pribadi pengguna situs.">
+<meta property="og:title" content="Kebijakan Privasi — PT Bhinneka Inti Global">
+<meta property="og:description" content="Kebijakan privasi PT Bhinneka Inti Global mengenai pengumpulan, penggunaan, dan perlindungan data pribadi pengguna situs.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo-big.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kebijakan Privasi — PT Bhinneka Inti Global">
+<meta name="twitter:description" content="Kebijakan privasi PT Bhinneka Inti Global mengenai pengumpulan, penggunaan, dan perlindungan data pribadi pengguna situs.">
+<link rel="canonical" href="./privacy-policy.dc.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Manrope',sans-serif;background:#FCFAF6;color:#1E3A8A;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:-.01em}
+a{color:#C2410C;text-decoration:underline}
+a:hover{color:#1E3A8A}
+</style>
+</helmet>
+<div style="background:#FCFAF6;min-height:100vh;position:relative">
+<div style="position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:{{ kawungPattern }};background-size:80px 80px"></div>
+<nav style="position:sticky;top:0;z-index:10;background:rgba(252,250,246,.95);border-bottom:1px solid rgba(30,58,138,.08);padding:18px 6%">
+  <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="big-landing-page.dc.html" style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;color:#1E3A8A;text-decoration:none">
+      <div style="width:30px;height:30px;border-radius:8px;overflow:hidden;background:#000"><img src="assets/logo-big.png" alt="BIG logo" style="width:100%;height:100%;object-fit:cover"/></div>
+      Bhinneka Inti Global
+    </a>
+    <div style="display:flex;align-items:center;gap:14px">
+      <button onClick="{{ toggleLang }}" aria-label="{{ t.langAriaLabel }}" style="display:flex;align-items:center;gap:6px;background:none;border:1.5px solid rgba(30,58,138,.2);color:#1E3A8A;font-weight:700;font-size:12px;padding:7px 12px;border-radius:100px;cursor:pointer;font-family:'Manrope',sans-serif" style-hover="background:rgba(30,58,138,.06)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20"/></svg>{{ t.langBtn }}</button>
+      <a href="big-landing-page.dc.html" style="font-size:13px;font-weight:700;color:#1E3A8A;text-decoration:none">{{ t.backLink }}</a>
+    </div>
+  </div>
+</nav>
+<div style="max-width:820px;margin:0 auto;padding:56px 6% 100px">
+  <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#C2410C;margin-bottom:14px">Legal</div>
+  <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.15;margin:0 0 8px">{{ t.title }}</h1>
+  <p style="font-size:13px;color:#5B6472;margin:0 0 40px">{{ t.effectiveDate }}</p>
+
+  <div style="display:flex;flex-direction:column;gap:36px;font-size:14.5px;line-height:1.85;color:#2A3542">
+    <sc-for list="{{ t.sections }}" as="sec" hint-placeholder-count="9">
+      <section>
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#1E3A8A;margin:0 0 10px">{{ sec.h }}</h2>
+        <div dangerouslySetInnerHTML="{{ sec.bodyHtml }}"></div>
+      </section>
+    </sc-for>
+  </div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  kawungPattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%231E3A8A' stroke-width='1.6'%3E%3Cg transform='translate(0,0)'%3E%3Cellipse cx='20' cy='10' rx='9' ry='14'/%3E%3Cellipse cx='20' cy='30' rx='9' ry='14'/%3E%3Cellipse cx='10' cy='20' rx='14' ry='9'/%3E%3Cellipse cx='30' cy='20' rx='14' ry='9'/%3E%3Ccircle cx='20' cy='20' r='4'/%3E%3C/g%3E%3Cg transform='translate(40,40)'%3E%3Cellipse cx='20' cy='10' rx='9' ry='14'/%3E%3Cellipse cx='20' cy='30' rx='9' ry='14'/%3E%3Cellipse cx='10' cy='20' rx='14' ry='9'/%3E%3Cellipse cx='30' cy='20' rx='14' ry='9'/%3E%3Ccircle cx='20' cy='20' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+  state = { lang: 'id' };
+  toggleLang = () => this.setState(s => ({ lang: s.lang === 'id' ? 'en' : 'id' }));
+  renderVals() {
+    const lang = this.state.lang;
+    const p = (html) => ({__html: html});
+    const CONTENT = {
+      id: {
+        langBtn:'EN', langAriaLabel:'Ganti bahasa ke Inggris', backLink:'← Kembali ke Beranda',
+        title:'Kebijakan Privasi', effectiveDate:'Berlaku efektif sejak 22 Juli 2026 · Terakhir diperbarui 22 Juli 2026',
+        sections: [
+          {h:'1. Pendahuluan', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global ("BIG", "kami") menghargai privasi setiap pengunjung situs ini. Kebijakan ini menjelaskan data pribadi apa yang kami kumpulkan melalui situs big.co.id, bagaimana kami menggunakannya, dan hak Anda terkait data tersebut, sesuai dengan Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi ("UU PDP").</p>')},
+          {h:'2. Data yang Kami Kumpulkan', bodyHtml: p('<p style="margin:0 0 10px">Kami hanya mengumpulkan data pribadi yang Anda berikan secara langsung dan sukarela melalui formulir kontak di situs ini, yaitu:</p><ul style="margin:0;padding-left:20px"><li>Nama lengkap</li><li>Alamat email</li><li>Nama perusahaan (opsional)</li><li>Isi pesan atau kebutuhan yang Anda sampaikan</li></ul><p style="margin:10px 0 0">Kami juga menggunakan Google Analytics untuk mengumpulkan data kunjungan situs secara agregat dan teranonimkan (lihat Bagian 6). Situs memuat font dari Google Fonts, yang dapat menerima alamat IP perangkat Anda sebagai bagian standar proses pengambilan font.</p>')},
+          {h:'3. Tujuan Penggunaan Data', bodyHtml: p('<p style="margin:0">Data yang Anda kirimkan melalui formulir kontak digunakan semata-mata untuk merespons pertanyaan atau permintaan konsultasi Anda, termasuk menghubungi Anda kembali melalui email atau saluran komunikasi lain yang Anda cantumkan. Kami tidak menggunakan data Anda untuk tujuan pemasaran tanpa persetujuan terpisah.</p>')},
+          {h:'4. Berbagi Data dengan Pihak Ketiga', bodyHtml: p('<p style="margin:0">BIG tidak menjual, menyewakan, atau membagikan data pribadi Anda kepada pihak ketiga untuk tujuan komersial. Data hanya dapat diakses oleh personel internal BIG yang terlibat langsung dalam menindaklanjuti permintaan Anda, atau bila diwajibkan oleh hukum yang berlaku.</p>')},
+          {h:'5. Penyimpanan &amp; Keamanan Data', bodyHtml: p('<p style="margin:0">Kami menyimpan data pribadi Anda hanya selama diperlukan untuk menindaklanjuti permintaan Anda atau selama diwajibkan oleh ketentuan hukum yang berlaku, dan menerapkan langkah-langkah keamanan teknis serta organisasional yang wajar untuk melindunginya dari akses, perubahan, atau pengungkapan yang tidak sah.</p>')},
+          {h:'6. Cookie &amp; Teknologi Pelacakan', bodyHtml: p('<p style="margin:0 0 10px">Kami menggunakan Google Analytics untuk memahami pola kunjungan situs secara agregat (misalnya halaman yang dilihat dan durasi kunjungan) — alamat IP dianonimkan (IP anonymization) sebelum diproses, dan data ini tidak digunakan untuk mengidentifikasi Anda secara personal. Anda dapat menonaktifkan pelacakan Google Analytics melalui <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p><p style="margin:0">Situs memuat font dari Google Fonts; sebagai bagian standar proses pengambilan font, Google dapat menerima alamat IP perangkat Anda sesuai kebijakan privasi mereka sendiri. Jika di kemudian hari kami menambahkan alat pelacakan non-esensial lain, kebijakan ini akan diperbarui terlebih dahulu untuk mencerminkannya.</p>')},
+          {h:'7. Hak Anda sebagai Subjek Data', bodyHtml: p('<p style="margin:0 0 10px">Sesuai UU PDP, Anda berhak untuk:</p><ul style="margin:0;padding-left:20px"><li>Meminta akses atau salinan data pribadi yang kami simpan tentang Anda</li><li>Meminta koreksi data yang tidak akurat</li><li>Meminta penghapusan data pribadi Anda</li><li>Menarik persetujuan Anda kapan saja</li></ul><p style="margin:10px 0 0">Untuk menggunakan hak-hak ini, silakan hubungi kami melalui <a href="mailto:info@big.co.id">info@big.co.id</a>.</p>')},
+          {h:'8. Perubahan Kebijakan', bodyHtml: p('<p style="margin:0">Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Perubahan material akan tercermin melalui pembaruan tanggal "terakhir diperbarui" di bagian atas halaman ini.</p>')},
+          {h:'9. Hubungi Kami', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global<br/>Jakarta Selatan<br/>Email: <a href="mailto:info@big.co.id">info@big.co.id</a></p>')}
+        ]
+      },
+      en: {
+        langBtn:'ID', langAriaLabel:'Switch language to Indonesian', backLink:'← Back to Home',
+        title:'Privacy Policy', effectiveDate:'Effective July 22, 2026 · Last updated July 22, 2026',
+        sections: [
+          {h:'1. Introduction', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global ("BIG", "we") values the privacy of every visitor to this site. This policy explains what personal data we collect through big.co.id, how we use it, and your rights regarding that data, in accordance with Indonesia’s Law No. 27 of 2022 on Personal Data Protection ("PDP Law").</p>')},
+          {h:'2. Data We Collect', bodyHtml: p('<p style="margin:0 0 10px">We only collect personal data you provide directly and voluntarily through the contact form on this site, namely:</p><ul style="margin:0;padding-left:20px"><li>Full name</li><li>Email address</li><li>Company name (optional)</li><li>The content of your message or inquiry</li></ul><p style="margin:10px 0 0">We also use Google Analytics to collect aggregated, anonymized site-visit data (see Section 6). The site loads fonts from Google Fonts, which may receive your device’s IP address as a standard part of font delivery.</p>')},
+          {h:'3. Purpose of Data Use', bodyHtml: p('<p style="margin:0">Data submitted through the contact form is used solely to respond to your inquiry or consultation request, including contacting you back via email or another channel you provide. We do not use your data for marketing purposes without separate consent.</p>')},
+          {h:'4. Sharing Data with Third Parties', bodyHtml: p('<p style="margin:0">BIG does not sell, rent, or share your personal data with third parties for commercial purposes. Data is only accessible to internal BIG personnel directly involved in following up on your request, or where required by applicable law.</p>')},
+          {h:'5. Data Storage &amp; Security', bodyHtml: p('<p style="margin:0">We retain your personal data only as long as necessary to follow up on your request or as required by applicable law, and apply reasonable technical and organizational security measures to protect it from unauthorized access, alteration, or disclosure.</p>')},
+          {h:'6. Cookies &amp; Tracking Technology', bodyHtml: p('<p style="margin:0 0 10px">We use Google Analytics to understand aggregate site-visit patterns (e.g. pages viewed and time on site) — IP addresses are anonymized before processing, and this data is not used to personally identify you. You can opt out of Google Analytics tracking via the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p><p style="margin:0">The site loads fonts from Google Fonts; as a standard part of font delivery, Google may receive your device’s IP address per their own privacy policy. If we add other non-essential tracking tools in the future, this policy will be updated in advance to reflect it.</p>')},
+          {h:'7. Your Rights as a Data Subject', bodyHtml: p('<p style="margin:0 0 10px">Under the PDP Law, you have the right to:</p><ul style="margin:0;padding-left:20px"><li>Request access to or a copy of the personal data we hold about you</li><li>Request correction of inaccurate data</li><li>Request deletion of your personal data</li><li>Withdraw your consent at any time</li></ul><p style="margin:10px 0 0">To exercise these rights, please contact us at <a href="mailto:info@big.co.id">info@big.co.id</a>.</p>')},
+          {h:'8. Policy Changes', bodyHtml: p('<p style="margin:0">We may update this policy from time to time. Material changes will be reflected by updating the "last updated" date at the top of this page.</p>')},
+          {h:'9. Contact Us', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global<br/>South Jakarta<br/>Email: <a href="mailto:info@big.co.id">info@big.co.id</a></p>')}
+        ]
+      }
+    };
+    const t = CONTENT[lang];
+    return { t, toggleLang: this.toggleLang, kawungPattern: this.kawungPattern };
+  }
+}
+
+</script>
+</body>
+</html>
