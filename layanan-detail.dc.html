@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Layanan Konsultasi ISO, GRC & Keamanan Siber — PT Bhinneka Inti Global</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet data-dc-atomics>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/logo-big.png">
+<meta name="description" content="Detail layanan konsultasi ISO, GRC, keamanan siber, audit, dan teknologi dari PT Bhinneka Inti Global untuk organisasi lintas industri di Indonesia.">
+<meta property="og:title" content="Layanan Konsultasi ISO, GRC & Keamanan Siber — PT Bhinneka Inti Global">
+<meta property="og:description" content="Detail layanan konsultasi ISO, GRC, keamanan siber, audit, dan teknologi dari PT Bhinneka Inti Global untuk organisasi lintas industri di Indonesia.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo-big.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Layanan Konsultasi ISO, GRC & Keamanan Siber — PT Bhinneka Inti Global">
+<meta name="twitter:description" content="Detail layanan konsultasi ISO, GRC, keamanan siber, audit, dan teknologi dari PT Bhinneka Inti Global untuk organisasi lintas industri di Indonesia.">
+<link rel="canonical" href="./layanan-detail.dc.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Manrope',sans-serif;background:#fff;color:#0F1A42;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+</style>
+</helmet>
+
+<nav style="position:sticky;top:0;z-index:10;background:rgba(252,250,246,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(15,26,66,.08)">
+  <div style="max-width:1000px;margin:0 auto;padding:14px 6%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <a href="big-landing-page.dc.html" style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px">
+      <div style="width:30px;height:30px;border-radius:8px;overflow:hidden;background:#000"><img src="assets/logo-big.png" alt="BIG logo" style="width:100%;height:100%;object-fit:cover"/></div>
+      Bhinneka Inti Global
+    </a>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+      <button onClick="{{ toggleLang }}" aria-label="{{ t.langAriaLabel }}" style="display:flex;align-items:center;gap:6px;background:rgba(15,26,66,.06);border:none;padding:8px 12px;border-radius:100px;font-weight:800;font-size:12.5px;cursor:pointer;color:#0F1A42">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 4 6 4 9s-1.5 6.3-4 9c-2.5-2.7-4-6-4-9s1.5-6.3 4-9z"/></svg>
+        {{ lang }}
+      </button>
+      <a href="big-landing-page.dc.html#services" style="font-size:13px;font-weight:700;color:#3A4A56;display:flex;align-items:center;gap:6px" style-hover="color:#0F1A42">{{ t.backLink }}</a>
+    </div>
+  </div>
+</nav>
+
+<sc-if value="{{ notFound }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:600px;margin:0 auto;padding:120px 6%;text-align:center">
+    <div style="font-size:22px;font-weight:800;margin-bottom:12px">{{ t.notFoundTitle }}</div>
+    <a href="big-landing-page.dc.html#services" style="color:#A8380D;font-weight:700">{{ t.backLink }}</a>
+  </div>
+</sc-if>
+
+<sc-if value="{{ svc }}" hint-placeholder-val="{{ true }}">
+<header style="padding:64px 6% 48px;background:#0F1A42;color:#fff;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;opacity:.07;pointer-events:none;background-image:{{ kawungPattern }};background-size:80px 80px"></div>
+  <div style="max-width:800px;margin:0 auto;position:relative">
+    <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#E8873A;margin-bottom:16px">{{ svc.category }}</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,4vw,3rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 20px">{{ svc.title }}</h1>
+    <p style="font-size:16px;line-height:1.75;color:rgba(255,255,255,.85);margin:0;max-width:640px;text-align:justify">{{ svc.summary }}</p>
+  </div>
+</header>
+
+<section style="padding:64px 6%">
+  <div style="max-width:800px;margin:0 auto">
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;margin:0 0 20px">{{ t.includedH }}</h2>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:48px">
+      <sc-for list="{{ svc.included }}" as="item" hint-placeholder-count="4">
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8380D" stroke-width="2.5" style="flex-shrink:0;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg>
+          <span style="font-size:14.5px;line-height:1.7;color:#2A3542">{{ item }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;margin:0 0 12px">{{ t.idealForH }}</h2>
+    <p style="font-size:14.5px;line-height:1.8;color:#4A5A66;margin:0 0 48px;text-align:justify">{{ svc.idealFor }}</p>
+
+    <div style="background:#EEF1F7;border-radius:20px;padding:36px 40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
+      <div>
+        <div style="font-weight:800;font-size:17px;margin-bottom:6px">{{ t.ctaTitle }}</div>
+        <div style="font-size:13.5px;color:#5B6472">{{ t.ctaDesc }}</div>
+      </div>
+      <a href="big-landing-page.dc.html#contact" style="background:#A8380D;color:#fff;font-weight:700;font-size:14px;padding:14px 28px;border-radius:100px;white-space:nowrap;transition:transform .2s" style-hover="transform:translateY(-2px)">{{ t.ctaBtn }}</a>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<footer style="padding:32px 6%;background:#0F1A42;color:rgba(255,255,255,.6);text-align:center;font-size:12.5px;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;opacity:.05;pointer-events:none;background-image:{{ kawungPattern }};background-size:80px 80px"></div>
+  <span style="position:relative">© 2026 PT Bhinneka Inti Global. {{ t.footerRights }}</span>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  kawungPattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.6'%3E%3Cg transform='translate(0,0)'%3E%3Cellipse cx='20' cy='10' rx='9' ry='14'/%3E%3Cellipse cx='20' cy='30' rx='9' ry='14'/%3E%3Cellipse cx='10' cy='20' rx='14' ry='9'/%3E%3Cellipse cx='30' cy='20' rx='14' ry='9'/%3E%3Ccircle cx='20' cy='20' r='4'/%3E%3C/g%3E%3Cg transform='translate(40,40)'%3E%3Cellipse cx='20' cy='10' rx='9' ry='14'/%3E%3Cellipse cx='20' cy='30' rx='9' ry='14'/%3E%3Cellipse cx='10' cy='20' rx='14' ry='9'/%3E%3Cellipse cx='30' cy='20' rx='14' ry='9'/%3E%3Ccircle cx='20' cy='20' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+  state = { lang: (typeof localStorage !== 'undefined' && localStorage.getItem('big_lang')) || 'ID' };
+  toggleLang = () => this.setState(s => {
+    const next = s.lang === 'ID' ? 'EN' : 'ID';
+    try { localStorage.setItem('big_lang', next); } catch (e) {}
+    return { lang: next };
+  });
+  UI = {
+    ID: { backLink:'← Semua Layanan', notFoundTitle:'Layanan tidak ditemukan', includedH:'Apa yang Anda Dapatkan', idealForH:'Cocok Untuk', ctaTitle:'Tertarik dengan layanan ini?', ctaDesc:'Diskusikan kebutuhan Anda dengan tim konsultan kami.', ctaBtn:'Konsultasi Gratis →', footerRights:'Seluruh hak cipta dilindungi.', langAriaLabel:'Ganti ke Bahasa Inggris' },
+    EN: { backLink:'← All Services', notFoundTitle:'Service not found', includedH:'What You Get', idealForH:'Ideal For', ctaTitle:'Interested in this service?', ctaDesc:'Discuss your needs with our consulting team.', ctaBtn:'Free Consultation →', footerRights:'All rights reserved.', langAriaLabel:'Switch to Indonesian' }
+  };
+  services = {
+    ID: {
+      'iso-consulting': {category:'Kepatuhan', title:'Konsultasi & Implementasi ISO', summary:'Pendampingan end-to-end dari gap analysis hingga siap diaudit, disesuaikan dengan profil risiko dan regulasi industri Anda.', included:['Gap analysis terhadap standar ISO yang relevan (27001, 9001, 27701, 27017, 14001, 45001, dsb.)','Penyusunan dokumentasi sistem manajemen sesuai standar','Pelatihan tim internal untuk menjalankan sistem','Pendampingan penuh hingga sertifikat terbit'], idealFor:'Organisasi yang butuh satu partner untuk seluruh siklus sertifikasi ISO, dari awal sampai audit eksternal selesai, tanpa mengelola banyak vendor.'},
+      'dokumentasi-sistem': {category:'Kepatuhan', title:'Penyusunan Dokumentasi Sistem', summary:'Kebijakan, prosedur operasional, instruksi kerja, dan dokumen privasi data yang lolos audit dan bisa dijalankan tim internal.', included:['Kebijakan dan SOP sesuai standar ISO yang berlaku','Instruksi kerja teknis untuk operasional harian','Dokumen privasi dan klasifikasi data','Review dan revisi sebelum diserahkan ke auditor'], idealFor:'Organisasi yang sudah punya proses berjalan tapi belum punya dokumentasi terstruktur yang siap diaudit.'},
+      'audit-regulator': {category:'Kepatuhan', title:'Dokumen Audit Regulator', summary:'Penyusunan dan pendampingan dokumen untuk pemeriksaan regulator seperti OJK dan PPATK, meliputi laporan kepatuhan, APU-PPT, hingga tindak lanjut temuan.', included:['Penyusunan laporan kepatuhan sesuai format regulator','Dokumen APU-PPT (anti pencucian uang & pendanaan terorisme)','Pendampingan saat pemeriksaan berlangsung','Tindak lanjut dan closing atas temuan regulator'], idealFor:'Perusahaan di sektor keuangan digital (fintech, P2P lending, aset digital) yang diawasi OJK, Bappebti, atau PPATK.'},
+      'gap-analysis': {category:'Kepatuhan', title:'Gap Analysis & Risk Assessment', summary:'Pemetaan kondisi eksisting vs standar ISO dan regulasi relevan. Output: laporan kesenjangan, risk register, roadmap.', included:['Asesmen kondisi eksisting terhadap standar target','Risk register terstruktur dengan prioritas risiko','Roadmap implementasi yang realistis','Laporan kesenjangan siap dipakai untuk perencanaan'], idealFor:'Organisasi yang baru memulai proses ISO dan butuh tahu persis di mana posisi mereka sebelum mulai implementasi.'},
+      'internal-audit': {category:'Kepatuhan', title:'Internal Audit & Mock Audit', summary:'Simulasi audit realistis oleh auditor berlisensi. Semua celah NCR ditutup sebelum auditor eksternal datang.', included:['Simulasi audit menyeluruh oleh auditor berpengalaman','Identifikasi non-conformity sebelum audit resmi','Pendampingan closing NCR','Laporan kesiapan sebelum Stage 1 & Stage 2'], idealFor:'Organisasi yang sudah dekat dengan jadwal sertifikasi dan ingin memastikan tidak ada temuan besar saat audit eksternal.'},
+      'pelatihan-iso': {category:'Kepatuhan', title:'Pelatihan & ISO Awareness', summary:'Program inhouse dari awareness karyawan hingga Internal Auditor. Tim Anda beroperasi mandiri pasca-sertifikasi.', included:['Program awareness untuk seluruh karyawan','Pelatihan Internal Auditor bersertifikat','Materi disesuaikan dengan standar ISO organisasi','Sesi tanya-jawab dan studi kasus nyata'], idealFor:'Organisasi yang ingin tim internal mampu menjalankan dan mengaudit sistem sendiri setelah sertifikasi selesai.'},
+      'sertifikasi': {category:'Kepatuhan', title:'Pendampingan Sertifikasi', summary:'Hadir di Stage 1 & Stage 2 audit. Koordinasi langsung dengan Certification Body terakreditasi KAN.', included:['Pendampingan langsung selama Stage 1 & Stage 2','Koordinasi dengan Certification Body terakreditasi KAN','Persiapan dokumen dan personel yang diwawancarai','Tindak lanjut temuan minor bila ada'], idealFor:'Organisasi yang siap audit eksternal dan butuh pendamping teknis di lapangan saat proses berlangsung.'},
+      'pentest': {category:'Keamanan Siber', title:'Penetration Testing', summary:'Uji ketahanan sistem, jaringan, dan aplikasi terhadap serangan siber nyata, sekaligus bukti kontrol keamanan untuk audit ISO.', included:['Pentest aplikasi web dan mobile','Pentest jaringan dan infrastruktur','Laporan teknis lengkap dengan tingkat keparahan','Laporan dapat dipakai sebagai bukti kontrol audit ISO'], idealFor:'Organisasi yang butuh validasi keamanan teknis sekaligus bukti kontrol untuk audit ISO 27001, dalam satu pekerjaan.'},
+      'it-audit-cisa': {category:'Keamanan Siber', title:'Audit Sistem IT (CISA)', summary:'Audit independen atas tata kelola, kontrol, dan keamanan sistem IT oleh auditor bersertifikat CISA, sesuai standar internasional.', included:['Audit tata kelola dan kontrol sistem IT','Evaluasi kontrol akses dan manajemen perubahan','Penilaian kesiapan terhadap standar internasional (COBIT, ISACA)','Laporan temuan dan rekomendasi perbaikan'], idealFor:'Organisasi yang butuh audit independen atas sistem IT mereka, misalnya untuk kepatuhan regulator atau permintaan investor/klien enterprise.'},
+      'pengembangan-aplikasi': {category:'Teknologi', title:'Pengembangan Aplikasi', summary:'Membangun aplikasi web, mobile, atau sistem internal sesuai kebutuhan bisnis, dengan standar keamanan sejak desain.', included:['Pengembangan aplikasi web dan mobile custom','Sistem internal untuk kebutuhan operasional','Keamanan diterapkan sejak tahap desain (secure by design)','Dokumentasi teknis untuk tim internal'], idealFor:'Organisasi yang butuh sistem atau dashboard internal, misalnya untuk monitoring compliance, yang juga aman secara teknis.'},
+      'pengadaan-it': {category:'Teknologi', title:'Pengadaan Hardware & Software', summary:'Pengadaan perangkat keras, lisensi software, dan infrastruktur IT sesuai kebutuhan organisasi.', included:['Pengadaan server dan perangkat keras','Lisensi software sesuai kebutuhan operasional','Konfigurasi keamanan dasar saat instalasi','Rekomendasi infrastruktur sesuai skala organisasi'], idealFor:'Organisasi yang butuh satu vendor terpercaya untuk pengadaan IT sekaligus konfigurasi keamanannya.'}
+    },
+    EN: {
+      'iso-consulting': {category:'Compliance', title:'ISO Consulting & Implementation', summary:'End-to-end support from gap analysis to audit-readiness, tailored to your risk profile and industry regulations.', included:['Gap analysis against relevant ISO standards (27001, 9001, 27701, 27017, 14001, 45001, etc.)','Management system documentation drafting','Internal team training to run the system','Full support through to certificate issuance'], idealFor:'Organizations that need one partner for the entire ISO certification cycle, from start to external audit, without juggling multiple vendors.'},
+      'dokumentasi-sistem': {category:'Compliance', title:'System Documentation Drafting', summary:'Policies, SOPs, work instructions, and privacy documents that pass audits and are usable by internal teams.', included:['Policies and SOPs matching the applicable ISO standard','Technical work instructions for daily operations','Data privacy and classification documents','Review and revision before submission to auditors'], idealFor:'Organizations with working processes that lack structured, audit-ready documentation.'},
+      'audit-regulator': {category:'Compliance', title:'Regulator Audit Documentation', summary:'Preparing and supporting documents for regulatory examinations such as OJK and PPATK, covering compliance reports, AML/CFT, and findings follow-up.', included:['Compliance reports in regulator-required format','AML/CFT (anti-money laundering) documents','On-site support during examinations','Follow-up and closing of regulator findings'], idealFor:'Digital finance companies (fintech, P2P lending, digital assets) supervised by OJK, Bappebti, or PPATK.'},
+      'gap-analysis': {category:'Compliance', title:'Gap Analysis & Risk Assessment', summary:'Mapping current state against relevant ISO standards and regulations. Output: gap report, risk register, roadmap.', included:['Current-state assessment against the target standard','Structured risk register with prioritization','Realistic implementation roadmap','Gap report ready for planning'], idealFor:'Organizations just starting the ISO process that need to know exactly where they stand before implementation.'},
+      'internal-audit': {category:'Compliance', title:'Internal Audit & Mock Audit', summary:'Realistic audit simulation by licensed auditors. Every NCR gap is closed before the external auditor arrives.', included:['Thorough audit simulation by experienced auditors','Non-conformity identification before the official audit','Support closing NCRs','Readiness report before Stage 1 & Stage 2'], idealFor:'Organizations nearing their certification schedule who want to ensure no major findings during the external audit.'},
+      'pelatihan-iso': {category:'Compliance', title:'Training & ISO Awareness', summary:'In-house programs from employee awareness to Internal Auditor. Your team operates independently post-certification.', included:['Awareness program for all employees','Certified Internal Auditor training','Materials tailored to the organization\'s ISO standard','Q&A sessions and real case studies'], idealFor:'Organizations that want their internal team to run and audit the system themselves after certification.'},
+      'sertifikasi': {category:'Compliance', title:'Certification Support', summary:'Present at Stage 1 & Stage 2 audits. Direct coordination with a KAN-accredited Certification Body.', included:['Direct support during Stage 1 & Stage 2','Coordination with a KAN-accredited Certification Body','Preparation of documents and interviewed personnel','Follow-up on minor findings if any'], idealFor:'Organizations ready for external audit that need a technical partner on-site during the process.'},
+      'pentest': {category:'Cybersecurity', title:'Penetration Testing', summary:'Test system, network, and application resilience against real cyber attacks, also serving as security control evidence for ISO audits.', included:['Web and mobile application pentesting','Network and infrastructure pentesting','Full technical report with severity ratings','Report usable as ISO audit control evidence'], idealFor:'Organizations that need technical security validation and ISO 27001 control evidence in one engagement.'},
+      'it-audit-cisa': {category:'Cybersecurity', title:'IT Systems Audit (CISA)', summary:'Independent audit of IT governance, controls, and security by CISA-certified auditors, aligned with international standards.', included:['IT governance and controls audit','Access control and change management evaluation','Readiness assessment against international standards (COBIT, ISACA)','Findings report with improvement recommendations'], idealFor:'Organizations that need an independent audit of their IT systems, e.g. for regulator compliance or enterprise client/investor requirements.'},
+      'pengembangan-aplikasi': {category:'Technology', title:'Application Development', summary:'Building web, mobile, or internal applications tailored to your business, with security built in from the design stage.', included:['Custom web and mobile application development','Internal systems for operational needs','Security applied from the design stage (secure by design)','Technical documentation for internal teams'], idealFor:'Organizations that need an internal system or dashboard, e.g. for compliance monitoring, that is also technically secure.'},
+      'pengadaan-it': {category:'Technology', title:'Hardware & Software Procurement', summary:'Procurement of hardware, software licenses, and IT infrastructure tailored to organizational needs.', included:['Server and hardware procurement','Software licensing for operational needs','Basic security configuration at installation','Infrastructure recommendations matched to organization scale'], idealFor:'Organizations that need one trusted vendor for IT procurement plus its security configuration.'}
+    }
+  };
+  renderVals() {
+    const lang = this.state.lang;
+    const t = this.UI[lang];
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('s') || 'iso-consulting';
+    const svc = this.services[lang][slug];
+    return { svc, notFound: !svc, t, lang, toggleLang: this.toggleLang, kawungPattern: this.kawungPattern };
+  }
+}
+
+</script>
+</body>
+</html>

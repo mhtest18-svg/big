@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Syarat & Ketentuan — PT Bhinneka Inti Global</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="assets/logo-big.png">
+<meta name="description" content="Syarat dan ketentuan penggunaan situs dan layanan PT Bhinneka Inti Global.">
+<meta property="og:title" content="Syarat & Ketentuan — PT Bhinneka Inti Global">
+<meta property="og:description" content="Syarat dan ketentuan penggunaan situs dan layanan PT Bhinneka Inti Global.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo-big.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Syarat & Ketentuan — PT Bhinneka Inti Global">
+<meta name="twitter:description" content="Syarat dan ketentuan penggunaan situs dan layanan PT Bhinneka Inti Global.">
+<link rel="canonical" href="./terms-of-service.dc.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Manrope',sans-serif;background:#FCFAF6;color:#1E3A8A;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:-.01em}
+a{color:#C2410C;text-decoration:underline}
+a:hover{color:#1E3A8A}
+</style>
+</helmet>
+<div style="background:#FCFAF6;min-height:100vh;position:relative">
+<div style="position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:{{ kawungPattern }};background-size:80px 80px"></div>
+<nav style="position:sticky;top:0;z-index:10;background:rgba(252,250,246,.95);border-bottom:1px solid rgba(30,58,138,.08);padding:18px 6%">
+  <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="big-landing-page.dc.html" style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;color:#1E3A8A;text-decoration:none">
+      <div style="width:30px;height:30px;border-radius:8px;overflow:hidden;background:#000"><img src="assets/logo-big.png" alt="BIG logo" style="width:100%;height:100%;object-fit:cover"/></div>
+      Bhinneka Inti Global
+    </a>
+    <div style="display:flex;align-items:center;gap:14px">
+      <button onClick="{{ toggleLang }}" aria-label="{{ t.langAriaLabel }}" style="display:flex;align-items:center;gap:6px;background:none;border:1.5px solid rgba(30,58,138,.2);color:#1E3A8A;font-weight:700;font-size:12px;padding:7px 12px;border-radius:100px;cursor:pointer;font-family:'Manrope',sans-serif" style-hover="background:rgba(30,58,138,.06)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20"/></svg>{{ t.langBtn }}</button>
+      <a href="big-landing-page.dc.html" style="font-size:13px;font-weight:700;color:#1E3A8A;text-decoration:none">{{ t.backLink }}</a>
+    </div>
+  </div>
+</nav>
+<div style="max-width:820px;margin:0 auto;padding:56px 6% 100px">
+  <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#C2410C;margin-bottom:14px">Legal</div>
+  <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.15;margin:0 0 8px">{{ t.title }}</h1>
+  <p style="font-size:13px;color:#5B6472;margin:0 0 40px">{{ t.effectiveDate }}</p>
+
+  <div style="display:flex;flex-direction:column;gap:36px;font-size:14.5px;line-height:1.85;color:#2A3542">
+    <sc-for list="{{ t.sections }}" as="sec" hint-placeholder-count="10">
+      <section>
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#1E3A8A;margin:0 0 10px">{{ sec.h }}</h2>
+        <div dangerouslySetInnerHTML="{{ sec.bodyHtml }}"></div>
+      </section>
+    </sc-for>
+  </div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  kawungPattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%231E3A8A' stroke-width='1.6'%3E%3Cg transform='translate(0,0)'%3E%3Cellipse cx='20' cy='10' rx='9' ry='14'/%3E%3Cellipse cx='20' cy='30' rx='9' ry='14'/%3E%3Cellipse cx='10' cy='20' rx='14' ry='9'/%3E%3Cellipse cx='30' cy='20' rx='14' ry='9'/%3E%3Ccircle cx='20' cy='20' r='4'/%3E%3C/g%3E%3Cg transform='translate(40,40)'%3E%3Cellipse cx='20' cy='10' rx='9' ry='14'/%3E%3Cellipse cx='20' cy='30' rx='9' ry='14'/%3E%3Cellipse cx='10' cy='20' rx='14' ry='9'/%3E%3Cellipse cx='30' cy='20' rx='14' ry='9'/%3E%3Ccircle cx='20' cy='20' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+  state = { lang: 'id' };
+  toggleLang = () => this.setState(s => ({ lang: s.lang === 'id' ? 'en' : 'id' }));
+  renderVals() {
+    const lang = this.state.lang;
+    const p = (html) => ({__html: html});
+    const CONTENT = {
+      id: {
+        langBtn:'EN', langAriaLabel:'Ganti bahasa ke Inggris', backLink:'← Kembali ke Beranda',
+        title:'Syarat & Ketentuan', effectiveDate:'Berlaku efektif sejak 22 Juli 2026 · Terakhir diperbarui 22 Juli 2026',
+        sections: [
+          {h:'1. Penerimaan Ketentuan', bodyHtml: p('<p style="margin:0">Dengan mengakses atau menggunakan situs big.co.id ("Situs"), Anda menyetujui syarat dan ketentuan berikut. Jika Anda tidak setuju, mohon untuk tidak melanjutkan penggunaan Situs.</p>')},
+          {h:'2. Tentang Layanan Kami', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global adalah firma konsultan yang menyediakan jasa konsultasi ISO, Governance Risk & Compliance (GRC), penetration testing, pengembangan aplikasi, dan pengadaan hardware/software IT. Informasi pada Situs bersifat umum dan informatif — bukan merupakan kontrak, penawaran resmi, maupun jaminan hasil layanan.</p>')},
+          {h:'3. Ruang Lingkup Engagement', bodyHtml: p('<p style="margin:0">Ruang lingkup, jadwal, biaya, dan deliverables aktual untuk setiap proyek diatur dalam perjanjian kerja (Statement of Work / kontrak) terpisah yang disepakati bersama klien. Informasi paket dan estimasi durasi pada Situs bersifat indikatif dan dapat berubah menyesuaikan kompleksitas organisasi klien.</p>')},
+          {h:'4. Pembayaran &amp; Pembatalan', bodyHtml: p('<p style="margin:0">Skema pembayaran (termin, metode, dan tenggat) untuk setiap engagement diatur dalam Statement of Work atau kontrak kerja terpisah yang disepakati bersama klien. Ketentuan pembatalan atau penjadwalan ulang proyek — termasuk kompensasi atas pekerjaan yang telah berjalan — juga mengikuti klausul yang disepakati pada kontrak tersebut, bukan ketentuan umum di Situs ini.</p>')},
+          {h:'5. Kekayaan Intelektual', bodyHtml: p('<p style="margin:0">Seluruh konten pada Situs — termasuk teks, logo, dan tata letak — adalah milik PT Bhinneka Inti Global dan dilindungi hukum kekayaan intelektual yang berlaku. Konten tidak boleh disalin, direproduksi, atau digunakan untuk tujuan komersial tanpa izin tertulis dari kami.</p>')},
+          {h:'6. Kerahasiaan', bodyHtml: p('<p style="margin:0">Informasi rahasia yang dipertukarkan selama proses konsultasi atau engagement diatur oleh perjanjian kerahasiaan (NDA) yang disepakati secara terpisah antara BIG dan klien.</p>')},
+          {h:'7. Batasan Tanggung Jawab', bodyHtml: p('<p style="margin:0">Informasi di Situs disediakan "sebagaimana adanya" tanpa jaminan apa pun. BIG tidak bertanggung jawab atas kerugian yang timbul dari penggunaan informasi pada Situs di luar konteks perjanjian kerja resmi.</p>')},
+          {h:'8. Hukum yang Berlaku', bodyHtml: p('<p style="margin:0">Syarat dan Ketentuan ini tunduk pada dan ditafsirkan sesuai hukum Republik Indonesia.</p>')},
+          {h:'9. Perubahan Ketentuan', bodyHtml: p('<p style="margin:0">Kami dapat memperbarui Syarat & Ketentuan ini sewaktu-waktu. Perubahan material akan tercermin melalui pembaruan tanggal "terakhir diperbarui" di bagian atas halaman ini.</p>')},
+          {h:'10. Hubungi Kami', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global<br/>Jakarta Selatan<br/>Email: <a href="mailto:info@big.co.id">info@big.co.id</a></p>')}
+        ]
+      },
+      en: {
+        langBtn:'ID', langAriaLabel:'Switch language to Indonesian', backLink:'← Back to Home',
+        title:'Terms of Service', effectiveDate:'Effective July 22, 2026 · Last updated July 22, 2026',
+        sections: [
+          {h:'1. Acceptance of Terms', bodyHtml: p('<p style="margin:0">By accessing or using big.co.id (the "Site"), you agree to the following terms and conditions. If you do not agree, please do not continue using the Site.</p>')},
+          {h:'2. About Our Services', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global is a consulting firm providing ISO consulting, Governance Risk & Compliance (GRC), penetration testing, application development, and IT hardware/software procurement services. Information on the Site is general and informational — it does not constitute a contract, formal offer, or guarantee of service outcomes.</p>')},
+          {h:'3. Engagement Scope', bodyHtml: p('<p style="margin:0">The actual scope, timeline, cost, and deliverables for each project are governed by a separate Statement of Work / contract agreed with the client. Package information and duration estimates on the Site are indicative and may change depending on the client organization’s complexity.</p>')},
+          {h:'4. Payment &amp; Cancellation', bodyHtml: p('<p style="margin:0">Payment terms (installments, method, and deadlines) for each engagement are set out in a separate Statement of Work or work contract agreed with the client. Cancellation or rescheduling terms — including compensation for work already performed — likewise follow the clauses agreed in that contract, not general terms on this Site.</p>')},
+          {h:'5. Intellectual Property', bodyHtml: p('<p style="margin:0">All content on the Site — including text, logos, and layout — is the property of PT Bhinneka Inti Global and protected under applicable intellectual property law. Content may not be copied, reproduced, or used for commercial purposes without our written permission.</p>')},
+          {h:'6. Confidentiality', bodyHtml: p('<p style="margin:0">Confidential information exchanged during a consulting engagement is governed by a separate non-disclosure agreement (NDA) agreed between BIG and the client.</p>')},
+          {h:'7. Limitation of Liability', bodyHtml: p('<p style="margin:0">Information on the Site is provided "as is" without any warranty. BIG is not liable for losses arising from use of information on the Site outside the context of a formal work agreement.</p>')},
+          {h:'8. Governing Law', bodyHtml: p('<p style="margin:0">These Terms of Service are governed by and construed in accordance with the laws of the Republic of Indonesia.</p>')},
+          {h:'9. Changes to Terms', bodyHtml: p('<p style="margin:0">We may update these Terms of Service from time to time. Material changes will be reflected by updating the "last updated" date at the top of this page.</p>')},
+          {h:'10. Contact Us', bodyHtml: p('<p style="margin:0">PT Bhinneka Inti Global<br/>South Jakarta<br/>Email: <a href="mailto:info@big.co.id">info@big.co.id</a></p>')}
+        ]
+      }
+    };
+    const t = CONTENT[lang];
+    return { t, toggleLang: this.toggleLang, kawungPattern: this.kawungPattern };
+  }
+}
+
+</script>
+</body>
+</html>
