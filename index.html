@@ -115,6 +115,9 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 @media (max-width: 640px) {
   .hero-pad { padding-top: 100px !important; }
   section[id] { min-height: auto !important; }
+  .carousel-nav-btn { width: 36px !important; height: 36px !important; }
+  .carousel-nav-btn[aria-label*="Sebelumnya"], .carousel-nav-btn[aria-label*="Previous"] { left: 6px !important; }
+  .carousel-nav-btn[aria-label*="Berikutnya"], .carousel-nav-btn[aria-label*="Next"] { right: 6px !important; }
 }
 </style></helmet>
 
@@ -189,7 +192,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 <!-- ABOUT -->
 <section id="about" style="padding:104px 6%;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;opacity:.035;pointer-events:none;background-image:{{ batikPatternDark }};background-size:120px 120px"></div>
-  <div style="max-width:1240px;margin:0 auto;position:relative">
+  <div style="max-width:1240px;width:100%;min-width:0;margin:0 auto;position:relative">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.aboutEyebrow }}</div>
     <div class="about-grid" style="display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start">
       <div>
@@ -320,7 +323,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 <!-- SECTORS -->
 <section id="sectors" style="padding:104px 6%;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;opacity:.035;pointer-events:none;background-image:{{ batikPatternDark }};background-size:120px 120px"></div>
-  <div style="max-width:1240px;margin:0 auto;position:relative">
+  <div style="max-width:1240px;width:100%;min-width:0;margin:0 auto;position:relative">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.sectorsEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 16px">{{ t.sectorsTitle }}</h2>
     <p style="font-size:15px;line-height:1.75;color:#4A5A66;max-width:620px;margin:0 0 44px;text-align:justify">{{ t.sectorsLede }}</p>
@@ -344,7 +347,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 
 <!-- CLIENTS -->
 <section id="clients" style="padding:88px 6%;background:#EEF1F7;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;">
-  <div style="max-width:1120px;margin:0 auto;text-align:center">
+  <div style="max-width:1120px;width:100%;min-width:0;margin:0 auto;text-align:center">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.clientsEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 40px">{{ t.clientsTitle }}</h2>
     <div style="border-radius:24px;background:linear-gradient(180deg,#F7F9FC,#fff);border:1px solid rgba(15,26,66,.07);padding:36px 0;box-shadow:0 20px 50px rgba(15,26,66,.06)">
@@ -383,7 +386,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 <!-- PROCESS -->
 <section id="process" style="padding:104px 6%;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;opacity:.035;pointer-events:none;background-image:{{ batikPatternDark }};background-size:120px 120px"></div>
-  <div style="max-width:1240px;margin:0 auto;position:relative">
+  <div style="max-width:1240px;width:100%;min-width:0;margin:0 auto;position:relative">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.processEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 48px">{{ t.processTitle }}</h2>
     <div style="position:relative;display:flex;flex-direction:column;gap:0">
@@ -420,7 +423,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 
 <!-- CASE STUDY -->
 <section id="case-study" style="padding:104px 6%;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;">
-  <div style="max-width:1120px;margin:0 auto">
+  <div style="max-width:1120px;width:100%;min-width:0;margin:0 auto">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.caseEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 40px;max-width:700px">{{ t.caseTitle }}</h2>
     <div style="position:relative" onMouseEnter="{{ casePause }}" onMouseLeave="{{ caseResume }}" onFocus="{{ casePause }}" onBlur="{{ caseResume }}">
@@ -491,8 +494,8 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
           </sc-for>
         </div>
       </div>
-      <button onClick="{{ casePrev }}" aria-label="{{ t.prevLabel }}" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">‹</button>
-      <button onClick="{{ caseNext }}" aria-label="{{ t.nextLabel }}" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">›</button>
+      <button onClick="{{ casePrev }}" aria-label="{{ t.prevLabel }}" class="carousel-nav-btn" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">‹</button>
+      <button onClick="{{ caseNext }}" aria-label="{{ t.nextLabel }}" class="carousel-nav-btn" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">›</button>
       <div style="display:flex;justify-content:center;gap:8px;margin-top:24px">
         <sc-for list="{{ caseDots }}" as="d" hint-placeholder-count="5">
           <button onClick="{{ d.go }}" aria-label="{{ d.label }}" style="width:{{ d.size }};height:8px;border-radius:4px;border:none;background:{{ d.bg }};cursor:pointer;transition:all .25s;padding:0"></button>
@@ -504,7 +507,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 
 <!-- TESTIMONIALS -->
 <section id="testimonials" style="padding:104px 6%;background:#EEF1F7;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;">
-  <div style="max-width:1240px;margin:0 auto">
+  <div style="max-width:1240px;width:100%;min-width:0;margin:0 auto">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.testiEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 48px">{{ t.testiTitle }}</h2>
     <div style="position:relative;max-width:760px;margin:0 auto 0" onMouseEnter="{{ testiPause }}" onMouseLeave="{{ testiResume }}" onFocus="{{ testiPause }}" onBlur="{{ testiResume }}">
@@ -527,8 +530,8 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
           </sc-for>
         </div>
       </div>
-      <button onClick="{{ testiPrev }}" aria-label="{{ t.prevLabel }}" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">‹</button>
-      <button onClick="{{ testiNext }}" aria-label="{{ t.nextLabel }}" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">›</button>
+      <button onClick="{{ testiPrev }}" aria-label="{{ t.prevLabel }}" class="carousel-nav-btn" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">‹</button>
+      <button onClick="{{ testiNext }}" aria-label="{{ t.nextLabel }}" class="carousel-nav-btn" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid rgba(15,26,66,.15);box-shadow:0 8px 20px rgba(15,26,66,.12);color:#0F1A42;font-size:18px;font-weight:700;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s" style-hover="background:#0F1A42;color:#fff;transform:translateY(-50%) scale(1.06)">›</button>
       <div style="display:flex;justify-content:center;gap:8px;margin-top:28px">
         <sc-for list="{{ testiDots }}" as="d" hint-placeholder-count="4">
           <button onClick="{{ d.go }}" aria-label="{{ d.label }}" style="width:{{ d.size }};height:8px;border-radius:4px;border:none;background:{{ d.bg }};cursor:pointer;transition:all .25s;padding:0"></button>
@@ -541,7 +544,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 <!-- PRICING -->
 <section id="pricing" style="padding:104px 6%;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;opacity:.035;pointer-events:none;background-image:{{ batikPatternDark }};background-size:120px 120px"></div>
-  <div style="max-width:1240px;margin:0 auto;position:relative">
+  <div style="max-width:1240px;width:100%;min-width:0;margin:0 auto;position:relative">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.pricingEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 16px">{{ t.pricingTitle }}</h2>
     <p style="font-size:15px;line-height:1.75;color:#4A5A66;max-width:620px;margin:0 0 44px;text-align:justify">{{ t.pricingLede }}</p>
@@ -579,7 +582,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 
 <!-- ARTICLES -->
 <section id="articles" style="padding:88px 6%;background:#EEF1F7;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;">
-  <div style="max-width:840px;margin:0 auto;text-align:center">
+  <div style="max-width:840px;width:100%;min-width:0;margin:0 auto;text-align:center">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.articlesEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 16px">{{ t.articlesTitle }}</h2>
     <p style="font-size:15px;line-height:1.75;color:#4A5A66;margin:0 auto 28px">{{ t.articlesDesc }}</p>
@@ -589,7 +592,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 
 <!-- CAREERS -->
 <section id="careers" style="padding:88px 6%;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;">
-  <div style="max-width:840px;margin:0 auto;text-align:center">
+  <div style="max-width:840px;width:100%;min-width:0;margin:0 auto;text-align:center">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.careersEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 16px">{{ t.careersTitle }}</h2>
     <p style="font-size:15px;line-height:1.75;color:#4A5A66;margin:0 auto 24px">{{ t.careersDesc }}</p>
@@ -603,7 +606,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 <!-- FAQ -->
 <section id="faq" style="padding:104px 6%;background:#EEF1F7;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;opacity:.035;pointer-events:none;background-image:{{ batikPatternDark }};background-size:120px 120px"></div>
-  <div style="max-width:780px;margin:0 auto;position:relative">
+  <div style="max-width:780px;width:100%;min-width:0;margin:0 auto;position:relative">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">FAQ</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 40px">{{ t.faqTitle }}</h2>
     <div>
@@ -631,7 +634,7 @@ input::placeholder,textarea::placeholder{color:#A3A3A3}
 
 <!-- CONTACT -->
 <section id="contact" style="padding:104px 6%;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;scroll-snap-align:start;scroll-margin-top:0;">
-  <div style="max-width:1240px;margin:0 auto">
+  <div style="max-width:1240px;width:100%;min-width:0;margin:0 auto">
     <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#A8380D;margin-bottom:14px">{{ t.contactEyebrow }}</div>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.14;margin:0 0 44px">{{ t.contactTitle }}</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px">
@@ -830,13 +833,7 @@ class Component extends DCLogic {
     this.scrollTicking = false;
     const scrolled = window.scrollY > 40;
     if (scrolled !== this.state.navScrolled) this.setState({navScrolled: scrolled});
-    if (!this.state.countStarted) {
-      const el = document.getElementById('trust-stats');
-      if (el && el.getBoundingClientRect().top < window.innerHeight * 0.85) {
-        this.setState({countStarted: true});
-        this.countUp();
-      }
-    }
+
     let current = '';
     for (const id of this.navSectionIds) {
       const el = document.getElementById(id);
@@ -861,6 +858,7 @@ class Component extends DCLogic {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll, {passive:true});
     this.processScroll();
+    if (!this.state.countStarted) { this.setState({countStarted: true}); this.countUp(); }
     this.syncClientMirrors();
     let mirrorTicks = 0;
     this._mirrorInterval = setInterval(() => { this.syncClientMirrors(); if (++mirrorTicks > 10) clearInterval(this._mirrorInterval); }, 1500);
